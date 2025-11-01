@@ -4,6 +4,10 @@
 
 [build.environment]
   NODE_VERSION = "22"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+[context.production]
+  command = "npm ci && npm run build"
 
 [[redirects]]
   from = "/*"
