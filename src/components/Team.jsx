@@ -7,60 +7,35 @@ export default function Team() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   const team = [
-    {
-      name: 'Abraham Ojes',
-      role: 'Founder & CEO',
-      background: 'Ex-Collect App',
-      description: 'Built payments infrastructure for thousands'
-    },
-    {
-      name: 'Adewale Martins',
-      role: 'Co-founder & CTO',
-      background: 'Ex-Collect App, Opay',
-      description: 'Built payments infrastructure for millions of users'
-    },
-    {
-      name: 'Blessing Makaraba',
-      role: 'Founding Engineer',
-      background: 'Ex-Flutterwave / GTBank',
-      description: 'Fintech infrastructure specialist'
-    },
-    {
-      name: 'Babajide Apata',
-      role: 'Founding Engineer',
-      background: 'Ex-Bitso / Interswitch',
-      description: 'Crypto payments expert'
-    },
-    {
-      name: 'Abdulfatai Aka',
-      role: 'Agentic Systems Engineer',
-      background: 'AI & DeFi',
-      description: 'Building the future of autonomous finance'
-    },
-    {
-      name: 'Evans Eburu',
-      role: 'Blockchain Infra Engineer',
-      background: 'DeFi specialist',
-      description: 'Smart contract and infrastructure expert'
-    }
+    { name: 'Abraham Ojes', role: 'Founder & CEO', background: 'Ex-Collect (SME payments infrastructure)' },
+    { name: 'Adewale Martins', role: 'Co-founder & CTO', background: 'Ex-Collect, Ex-OPay (millions of users)' },
+    { name: 'Blessing Makaraba', role: 'Founding Engineer', background: 'Ex-Flutterwave/GTBank' },
+    { name: 'Babajide Apata', role: 'Founding Engineer', background: 'Ex-Bitso/Interswitch' },
+    { name: 'Abdulfatai Aka', role: 'Agentic Systems Engineer', background: 'AI & DeFi' },
+    { name: 'Evans Eburu', role: 'Blockchain Engineer', background: 'DeFi specialist' }
   ]
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center justify-center py-20 px-6 bg-black">
+    <section ref={ref} className="min-h-screen flex items-center justify-center py-20 px-6 bg-black relative">
+      <motion.div 
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </motion.div>
+
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-5xl md:text-7xl font-black mb-8 text-center text-white">
-            Team that lived the problem
-          </h2>
-          <p className="text-2xl text-center text-gray-300 mb-16">
-            Built payments infrastructure. Now building the future.
-          </p>
+          <h2 className="text-5xl md:text-7xl font-black mb-16 text-center text-white">Team</h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {team.map((member, index) => (
               <motion.div
                 key={index}
@@ -81,11 +56,19 @@ export default function Team() {
                 </div>
                 <h3 className="text-xl font-bold text-white text-center mb-1">{member.name}</h3>
                 <div className="text-gray-400 text-center font-semibold mb-2">{member.role}</div>
-                <div className="text-gray-400 text-sm text-center mb-3">{member.background}</div>
-                <p className="text-gray-300 text-sm text-center">{member.description}</p>
+                <p className="text-gray-300 text-sm text-center">{member.background}</p>
               </motion.div>
             ))}
           </div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ delay: 1 }}
+            className="text-xl text-center text-gray-400"
+          >
+            <span className="font-semibold text-white">Advisors:</span> Former CBN regulator | Ex-Wise executive | Crypto fund partner
+          </motion.p>
         </motion.div>
       </div>
     </section>

@@ -6,92 +6,95 @@ export default function TAM() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
-  const milestones = [
-    { year: 'Now', users: '250', penetration: '0.001%', gmv: '$0.5M' },
-    { year: 'Year 1', users: '10K', penetration: '0.05%', gmv: '$6.4M' },
-    { year: 'Year 3', users: '185K', penetration: '1%', gmv: '$128M' },
-    { year: 'Year 5', users: '925K', penetration: '5%', gmv: '$641M' },
-  ]
-
   return (
-    <section ref={ref} className="min-h-screen flex items-center justify-center py-20 px-6 bg-black">
+    <section ref={ref} className="min-h-screen flex items-center justify-center py-20 px-6 bg-gradient-to-b from-gray-900 to-black relative">
+      {/* Subtle arrow guide */}
+      <motion.div 
+        className="absolute bottom-10 right-10"
+        animate={{ x: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </motion.div>
+
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-5xl md:text-7xl font-black mb-8 text-center text-white">
-            $641M TAM
+          <h2 className="text-5xl md:text-7xl font-black mb-12 text-center text-white">
+            $3.8B → $185B+ across<br/>Global South
           </h2>
-          <p className="text-2xl text-center text-gray-400 mb-16">
-            Capturing 1% = <span className="text-white font-bold">$6.4M</span>
-          </p>
 
+          {/* Phase 1 Table */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.3 }}
-            className="border border-gray-800 p-8 mb-12"
+            className="mb-16 overflow-x-auto"
           >
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-5xl font-black text-white mb-2">18.5M</div>
-                <div className="text-gray-400">People need dollars today</div>
-                <div className="text-sm text-gray-500 mt-1">Nigeria, Ghana, Kenya</div>
-              </div>
-              <div>
-                <div className="text-5xl font-black text-white mb-2">$1,200</div>
-                <div className="text-gray-400">Average user per year</div>
-              </div>
-              <div>
-                <div className="text-5xl font-black text-white mb-2">2.5%</div>
-                <div className="text-gray-400">Our take</div>
-              </div>
-            </div>
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="border-b-2 border-gray-700">
+                  <th className="py-4 text-xl font-bold text-white">Segment</th>
+                  <th className="py-4 text-xl font-bold text-white">Users (NG/GH/KE)</th>
+                  <th className="py-4 text-xl font-bold text-white">Our TAM</th>
+                </tr>
+              </thead>
+              <tbody className="text-lg">
+                {[
+                  { segment: 'Online shoppers', users: '17M', tam: '$340M' },
+                  { segment: 'Freelancers', users: '3.5M', tam: '$350M' },
+                  { segment: 'E-commerce', users: '2.45M', tam: '$490M' },
+                  { segment: 'Importers', users: '1.15M', tam: '$863M' },
+                  { segment: 'Others', users: '31M', tam: '$1.8B' }
+                ].map((row, index) => (
+                  <motion.tr
+                    key={index}
+                    className="border-b border-gray-800"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ delay: 0.5 + index * 0.1 }}
+                  >
+                    <td className="py-4 text-gray-300">{row.segment}</td>
+                    <td className="py-4 text-white">{row.users}</td>
+                    <td className="py-4 text-white font-semibold">{row.tam}</td>
+                  </motion.tr>
+                ))}
+                <motion.tr
+                  className="border-t-2 border-gray-700"
+                  initial={{ opacity: 0 }}
+                  animate={isInView ? { opacity: 1 } : {}}
+                  transition={{ delay: 1 }}
+                >
+                  <td className="py-4 text-white font-bold">Phase 1 Total</td>
+                  <td className="py-4 text-white font-bold">55M</td>
+                  <td className="py-4 text-white font-bold text-2xl">$3.8B</td>
+                </motion.tr>
+              </tbody>
+            </table>
           </motion.div>
 
-          <h3 className="text-3xl font-bold text-center mb-8 text-white">Realistic penetration:</h3>
-
-          <div className="space-y-4">
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -50 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.5 + index * 0.15 }}
-                className="border border-gray-800 hover:border-gray-700 transition-all p-6"
-              >
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
-                  <div>
-                    <div className="text-sm text-gray-400 mb-1">Timeline</div>
-                    <div className="text-xl font-bold text-white">{milestone.year}</div>
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-400 mb-1">Users</div>
-                    <div className="text-xl font-bold text-white">{milestone.users}</div>
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-400 mb-1">Market Share</div>
-                    <div className="text-xl font-bold text-white">{milestone.penetration}</div>
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-400 mb-1">GMV</div>
-                    <div className="text-xl font-bold text-white">{milestone.gmv}</div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.p
+          {/* Global expansion */}
+          <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 1.2 }}
-            className="text-center text-2xl font-semibold text-gray-400 mt-12"
+            className="border border-gray-800 p-8"
           >
-            Path to <span className="text-white">$12B+</span> as we expand to 10 more African markets
-          </motion.p>
+            <h3 className="text-3xl font-bold text-white mb-6">Global South expansion:</h3>
+            <div className="grid md:grid-cols-2 gap-4 text-xl text-gray-300 mb-6">
+              <div>• +10 African markets: <span className="text-white font-semibold">$8.7B</span></div>
+              <div>• +LatAm (Argentina, Brazil, Mexico): <span className="text-white font-semibold">+$45B</span></div>
+              <div>• +SEA (Philippines, Indonesia, Vietnam): <span className="text-white font-semibold">+$80B</span></div>
+            </div>
+            <p className="text-3xl font-black text-white">
+              Total: $185B+ wherever fiat fails
+            </p>
+          </motion.div>
         </motion.div>
       </div>
     </section>

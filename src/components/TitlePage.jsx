@@ -53,7 +53,6 @@ export default function TitlePage() {
       </motion.div>
 
       <div className="relative z-10 text-center px-6 max-w-4xl">
-
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -92,10 +91,10 @@ export default function TitlePage() {
             className="space-y-2"
           >
             <p className="text-2xl md:text-4xl text-white font-bold">
-              The Dollar Access Bank
+              The Stablecoin Bank for the Global South
             </p>
             <p className="text-xl md:text-2xl text-gray-400">
-              A stablecoin neobank
+              Starting in Nigeria, scaling across emerging markets
             </p>
           </motion.div>
         </motion.div>

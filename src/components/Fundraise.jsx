@@ -6,123 +6,93 @@ export default function Fundraise() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
-  const allocation = [
-    { category: 'Product & Engineering', percent: 40, color: 'bg-white' },
-    { category: 'Regulatory & Compliance', percent: 25, color: 'bg-gray-400' },
-    { category: 'Growth & Expansion', percent: 20, color: 'bg-gray-500' },
-    { category: 'Team & Operations', percent: 15, color: 'bg-gray-600' },
-  ]
-
-  const unlocks = [
-    '10K users',
-    '$30M volume',
-    'Nigeria + Ghana licenses',
-    'Card launch + P2P network'
-  ]
-
   return (
-    <section ref={ref} className="min-h-screen flex items-center justify-center py-20 px-6 bg-black">
+    <section ref={ref} className="min-h-screen flex items-center justify-center py-20 px-6 bg-gradient-to-b from-gray-900 to-black relative">
+      <motion.div 
+        className="absolute bottom-10 right-10"
+        animate={{ x: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </motion.div>
+
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-5xl md:text-7xl font-black mb-8 text-center text-white">
-            $1.5M to reach 10K users
+          <h2 className="text-5xl md:text-7xl font-black mb-16 text-center text-white">
+            The Ask: $1.5M Pre-Seed
           </h2>
-          <p className="text-2xl text-center text-gray-300 mb-16">
-            18-month runway to Series A readiness
-          </p>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            {/* Allocation */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.3 }}
-              className="border border-gray-800 p-8"
-            >
-              <h3 className="text-3xl font-bold mb-8 text-white">Allocation</h3>
-              <div className="space-y-6">
-                {allocation.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ delay: 0.5 + index * 0.1 }}
-                  >
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-lg text-white font-semibold">{item.category}</span>
-                      <span className="text-2xl font-bold text-white">{item.percent}%</span>
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
-                      <motion.div
-                        className={`h-full ${item.color}`}
-                        initial={{ width: 0 }}
-                        animate={isInView ? { width: `${item.percent}%` } : {}}
-                        transition={{ duration: 1, delay: 0.7 + index * 0.1 }}
-                      />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Unlocks */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.3 }}
-              className="border border-gray-800 p-8"
-            >
-              <h3 className="text-3xl font-bold mb-8 text-white">Unlocks</h3>
-              <div className="space-y-4">
-                {unlocks.map((unlock, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ delay: 0.8 + index * 0.1 }}
-                    className="flex items-center gap-4 border border-gray-700 p-4"
-                  >
-                    <div className="w-8 h-8 bg-white flex items-center justify-center flex-shrink-0">
-                      <span className="text-black font-bold">✓</span>
-                    </div>
-                    <span className="text-lg text-white">{unlock}</span>
-                  </motion.div>
-                ))}
-              </div>
-
+          {/* Use of funds */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ delay: 0.3 }}
+            className="grid md:grid-cols-2 gap-6 mb-16"
+          >
+            {[
+              { pct: '40%', amount: '$600K', label: 'Cards', desc: 'Signify integration, compliance, virtual + physical' },
+              { pct: '25%', amount: '$375K', label: 'Regulatory', desc: 'Nigeria PSP license, Ghana/Kenya prep' },
+              { pct: '20%', amount: '$300K', label: 'Growth', desc: 'Paid acquisition to 50K users' },
+              { pct: '15%', amount: '$225K', label: 'Team', desc: 'Country manager, compliance, 2 engineers' }
+            ].map((item, index) => (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : {}}
-                transition={{ delay: 1.4 }}
-                className="mt-8 p-4 border border-gray-700"
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ delay: 0.5 + index * 0.1 }}
+                className="border border-gray-800 p-6"
               >
-                <div className="text-center">
-                  <div className="text-sm text-gray-400 mb-1">Unit Economics</div>
-                  <div className="text-3xl font-bold text-white mb-2">
-                    $98 / user / year
-                  </div>
-                  <div className="grid grid-cols-3 gap-4 text-sm">
-                    <div>
-                      <div className="text-gray-400">CAC</div>
-                      <div className="text-white font-bold">$15</div>
-                    </div>
-                    <div>
-                      <div className="text-gray-400">LTV</div>
-                      <div className="text-white font-bold">$210</div>
-                    </div>
-                    <div>
-                      <div className="text-gray-400">Ratio</div>
-                      <div className="text-white font-bold">14:1</div>
-                    </div>
-                  </div>
+                <div className="flex items-baseline gap-3 mb-3">
+                  <span className="text-4xl font-black text-white">{item.pct}</span>
+                  <span className="text-2xl text-gray-400">{item.amount}</span>
                 </div>
+                <h3 className="text-2xl font-bold text-white mb-2">{item.label}</h3>
+                <p className="text-gray-400">{item.desc}</p>
               </motion.div>
-            </motion.div>
-          </div>
+            ))}
+          </motion.div>
+
+          {/* Milestones */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ delay: 0.9 }}
+            className="border border-gray-800 p-8 mb-12"
+          >
+            <h3 className="text-3xl font-bold text-white mb-6">Milestones:</h3>
+            <div className="space-y-4 text-xl">
+              <div className="flex items-start gap-4">
+                <span className="text-green-500 font-bold min-w-[120px]">Month 6:</span>
+                <span className="text-gray-300">Cards launch, 5K users, break-even</span>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="text-green-500 font-bold min-w-[120px]">Month 12:</span>
+                <span className="text-gray-300">15K users, $1.8M ARR</span>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="text-green-500 font-bold min-w-[120px]">Month 18:</span>
+                <span className="text-gray-300">50K users, $7.6M ARR → Series A ready</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* What we're proving */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ delay: 1.1 }}
+            className="text-center"
+          >
+            <p className="text-2xl md:text-3xl font-bold text-white">
+              What we're proving: DeFi yields + cards = retention moat no one else has.
+            </p>
+          </motion.div>
         </motion.div>
       </div>
     </section>

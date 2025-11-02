@@ -1,149 +1,133 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 
 export default function Competitive() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [hoveredCompetitor, setHoveredCompetitor] = useState(null)
-
-  const competitors = [
-    { name: 'Autospend', time: '2 min', cost: 200, x: 20, y: 10, color: 'bg-green-500', highlight: true },
-    { name: 'Crypto Exchanges', time: '30 min', cost: 300, x: 40, y: 35, color: 'bg-gray-400' },
-    { name: 'Dom Account', time: '2 hours', cost: 400, x: 15, y: 55, color: 'bg-gray-500' },
-    { name: 'Binance P2P', time: '1 hour', cost: 350, x: 60, y: 55, color: 'bg-gray-500' },
-    { name: 'Parallel Market', time: 'Same day', cost: 800, x: 75, y: 70, color: 'bg-gray-600' },
-    { name: 'Bank Wire', time: '3-5 days', cost: 600, x: 30, y: 85, color: 'bg-gray-600' },
-  ]
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center justify-center py-20 px-6 bg-black">
+    <section ref={ref} className="min-h-screen flex items-center justify-center py-20 px-6 bg-gradient-to-b from-gray-900 to-black relative">
+      {/* Subtle arrow guide */}
+      <motion.div 
+        className="absolute bottom-10 right-10"
+        animate={{ x: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </motion.div>
+
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-5xl md:text-7xl font-black mb-8 text-center text-white">
-            Why we win: Speed + Cost
+          <h2 className="text-5xl md:text-7xl font-black mb-16 text-center text-white">
+            Cards + DeFi = Unbeatable
           </h2>
-          <p className="text-2xl text-center text-gray-300 mb-16">
-            Onboarding Speed vs Total Cost
-          </p>
 
-          {/* Competitive positioning chart */}
+          {/* Comparison Table */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.3 }}
-            className="border border-gray-800 p-8 mb-12"
+            className="mb-16 overflow-x-auto"
           >
-            <div className="relative h-96 w-full">
-              {/* Axes */}
-              <div className="absolute bottom-0 left-0 w-full h-full border-l-2 border-b-2 border-gray-600">
-                {/* Y-axis label */}
-                <div className="absolute -left-20 top-0 text-gray-400 text-sm transform -rotate-90 origin-left">
-                  Fast (2 min)
-                </div>
-                <div className="absolute -left-20 bottom-0 text-gray-400 text-sm transform -rotate-90 origin-left">
-                  Slow (5 days)
-                </div>
-                
-                {/* X-axis label */}
-                <div className="absolute -bottom-8 left-0 text-gray-400 text-sm">
-                  Low Cost (&lt; 300 bps)
-                </div>
-                <div className="absolute -bottom-8 right-0 text-gray-400 text-sm">
-                  High Cost (800+ bps)
-                </div>
-
-                {/* Competitors */}
-                {competitors.map((comp, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ delay: 0.5 + index * 0.1 }}
-                    onMouseEnter={() => setHoveredCompetitor(comp.name)}
-                    onMouseLeave={() => setHoveredCompetitor(null)}
-                    className="absolute cursor-pointer"
-                    style={{
-                      left: `${comp.x}%`,
-                      bottom: `${comp.y}%`,
-                      transform: 'translate(-50%, 50%)'
-                    }}
-                  >
-                    <motion.div
-                      whileHover={{ scale: 1.2 }}
-                      className={`${comp.color} ${comp.highlight ? 'ring-4 ring-green-400 shadow-lg shadow-green-500/50' : ''} p-3`}
-                    >
-                      <div className={`text-xs font-bold whitespace-nowrap ${comp.highlight ? 'text-black' : 'text-white'}`}>{comp.name}</div>
-                      {(hoveredCompetitor === comp.name || comp.highlight) && (
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          className={`text-xs mt-1 ${comp.highlight ? 'text-black' : 'text-white'}`}
-                        >
-                          <div>{comp.time}</div>
-                          <div>{comp.cost} bps</div>
-                        </motion.div>
-                      )}
-                    </motion.div>
-                    {comp.highlight && (
-                      <motion.div
-                        animate={{ scale: [1, 1.2, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                        className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-2xl"
-                      >
-                        ⭐
-                      </motion.div>
-                    )}
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="border-b-2 border-gray-700">
+                  <th className="py-4 text-xl font-bold text-white">Feature</th>
+                  <th className="py-4 text-xl font-bold text-green-500">Autospend</th>
+                  <th className="py-4 text-xl font-bold text-gray-400">Grey</th>
+                  <th className="py-4 text-xl font-bold text-gray-400">Cleva</th>
+                </tr>
+              </thead>
+              <tbody className="text-lg">
+                <motion.tr
+                  className="border-b border-gray-800"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: 0.5 }}
+                >
+                  <td className="py-4 text-gray-300 font-semibold">Yield</td>
+                  <td className="py-4 text-green-500 font-bold text-xl">40% APY</td>
+                  <td className="py-4 text-gray-500">0%</td>
+                  <td className="py-4 text-gray-500">0%</td>
+                </motion.tr>
+                <motion.tr
+                  className="border-b border-gray-800"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: 0.6 }}
+                >
+                  <td className="py-4 text-gray-300 font-semibold">Cards</td>
+                  <td className="py-4 text-green-500 font-bold">Q1 2026</td>
+                  <td className="py-4 text-white">✅ Live</td>
+                  <td className="py-4 text-gray-500">Coming</td>
+                </motion.tr>
+                <motion.tr
+                  className="border-b border-gray-800"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: 0.7 }}
+                >
+                  <td className="py-4 text-gray-300 font-semibold">P2P</td>
+                  <td className="py-4 text-green-500 font-bold">Free</td>
+                  <td className="py-4 text-gray-500">Paid</td>
+                  <td className="py-4 text-gray-500">Limited</td>
+                </motion.tr>
+                <motion.tr
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: 0.8 }}
+                >
+                  <td className="py-4 text-gray-300 font-semibold">Users</td>
+                  <td className="py-4 text-green-500">250</td>
+                  <td className="py-4 text-gray-500">12,000+</td>
+                  <td className="py-4 text-gray-500">Thousands</td>
+                </motion.tr>
+              </tbody>
+            </table>
           </motion.div>
 
-          {/* How it works */}
+          {/* Our dual edge */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 1 }}
-            className="border border-gray-800 p-8"
+            className="space-y-8"
           >
-            <h3 className="text-3xl font-bold mb-6 text-center text-white">How Autospend's Virtual Account Works</h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              {[
-                { step: '1', title: 'Create Account', desc: 'Gets virtual ₦ account (2 minutes)' },
-                { step: '2', title: 'Fund with Naira', desc: 'Transfer from any Nigerian bank' },
-                { step: '3', title: 'Instant Conversion', desc: 'Naira → USDC (< 30 seconds)' },
-                { step: '4', title: 'Hold or Spend', desc: 'Keep in wallet, send P2P, or use card' },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 1.2 + index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-12 h-12 bg-white text-black flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                    {item.step}
-                  </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">{item.title}</h4>
-                  <p className="text-gray-400 text-sm">{item.desc}</p>
-                </motion.div>
-              ))}
+            <h3 className="text-3xl font-bold text-white mb-6">Our dual edge:</h3>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="border border-green-500 bg-green-500/5 p-6">
+                <h4 className="text-2xl font-bold text-green-500 mb-3">1. DeFi Yields (Live Now)</h4>
+                <p className="text-gray-300">
+                  40% APY via Katana vaults. Grey = 0%. Defensible: they'd need 18-24 month rebuild.
+                </p>
+              </div>
+
+              <div className="border border-blue-500 bg-blue-500/5 p-6">
+                <h4 className="text-2xl font-bold text-blue-500 mb-3">2. Cards (Q1 2026)</h4>
+                <p className="text-gray-300">
+                  Virtual + physical via Signify. Mass market unlock.
+                </p>
+              </div>
+            </div>
+
+            <div className="border border-gray-800 p-8 text-center">
+              <p className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Together: Grey has cards but 0% yield.<br/>
+                We'll have both = unbeatable.
+              </p>
+              <p className="text-xl text-gray-400">
+                <span className="font-semibold">Positioning:</span> Today = best yields. Q1 = best yields + cards. No one else will have both.
+              </p>
             </div>
           </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ delay: 1.8 }}
-            className="text-center text-2xl font-semibold text-gray-400 mt-12"
-          >
-            Bank-like simplicity + Crypto speed + Licensed trust
-          </motion.p>
         </motion.div>
       </div>
     </section>

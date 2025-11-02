@@ -12,7 +12,7 @@ export default function PDFExport() {
       
       const opt = {
         margin: 0,
-        filename: 'Autospend-Pitch-Deck.pdf',
+        filename: 'Autospend-Pitch-Deck-v8.pdf',
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { 
           scale: 2,
