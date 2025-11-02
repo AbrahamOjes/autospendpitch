@@ -13,12 +13,12 @@ export default function Appendix() {
         <div className="space-y-6">
           {[
             {
-              q: '"40% APY sounds too good to be true"',
-              a: "It's DeFi. Katana vaults on Ronin/Polygon. Audited protocols. Users can choose safe 4% or optimized 40%. Real yield, already live."
+              q: '"8-12% APY sounds too good to be true"',
+              a: "Industry benchmark: 5-6% average (Visa 2025 Report). We optimize across Morpho/Aave/Credit Coop for 8-12%. Users choose conservative (5-6%) or optimized (10-12%). Protocols have $670B+ originated, $14.8B active loans. Used by Coinbase, Société Générale. Not experimental."
             },
             {
               q: '"What if cards slip past Q1?"',
-              a: "We're still growing on yield alone (already at 250 users). Just slower. Cards are the accelerant, not the only path."
+              a: "We're growing on yield alone (250 users, 85% retention). Just slower. Yield differential (8-12% vs Grey's 0%) is compelling."
             },
             {
               q: '"Is 3% P2P volume enough to claim network effects?"',
@@ -26,15 +26,23 @@ export default function Appendix() {
             },
             {
               q: '"Can you keep CAC at $15-20?"',
-              a: "Maybe not. If it goes to $25-30, we're still viable (15:1 LTV/CAC). But won't know until we test paid at scale."
+              a: "Maybe not. If it goes to $25-30, we're still viable (18:1 LTV/CAC). Won't know until we test paid."
             },
             {
               q: '"Why can\'t Grey just add DeFi?"',
-              a: "They'd need to rebuild their entire infrastructure on crypto rails. 18-24 months minimum. By then we have cards + users."
+              a: "They'd need to rebuild on crypto rails. 18-24 months minimum. By then we have cards + users."
             },
             {
               q: '"What\'s your actual edge?"',
-              a: "Today: Only one with 40% yield (competitors at 0%). Q1 2026: Only one with yield + cards. Moat: Can't be copied without complete rebuild."
+              a: "Today: Only one with 8-12% yield (competitors at 0%). Q1 2026: Only one with yield + cards. Moat: Built on $670B+ infrastructure competitors can't access without 18-24 month rebuild."
+            },
+            {
+              q: '"How is this different from Aave directly?"',
+              a: "1. Nigerians fund with naira (we handle crypto complexity). 2. We optimize across protocols for best rates. 3. Cards coming Q1 2026. Most Nigerians don't know what Aave is. We make it invisible."
+            },
+            {
+              q: '"What are the DeFi risks?"',
+              a: "Smart contract risk: All protocols audited. $670B+ originated without major hacks. Rate volatility: 4-16% historical range. We model conservatively at 7% midpoint. Regulatory: Protocols already institutional (Coinbase, Société Générale). We maintain proper licensing."
             }
           ].map((faq, index) => (
             <div key={index} className="border-l-2 border-gray-700 pl-6">
@@ -68,22 +76,22 @@ export default function Appendix() {
                   <td className="py-3 text-white font-bold">50,000</td>
                 </tr>
                 <tr className="border-b border-gray-800">
-                  <td className="py-3 text-gray-300">Monthly Revenue</td>
-                  <td className="py-3 text-white">$3K</td>
-                  <td className="py-3 text-white">$63K</td>
-                  <td className="py-3 text-white font-bold">$633K</td>
+                  <td className="py-3 text-gray-300">Revenue/User/Year</td>
+                  <td className="py-3 text-white">$105</td>
+                  <td className="py-3 text-white">$177</td>
+                  <td className="py-3 text-white font-bold">$177</td>
                 </tr>
                 <tr className="border-b border-gray-800">
                   <td className="py-3 text-gray-300">Annual Revenue</td>
-                  <td className="py-3 text-white">$36K</td>
+                  <td className="py-3 text-white">$26K</td>
                   <td className="py-3 text-gray-500">-</td>
-                  <td className="py-3 text-green-500 font-bold text-xl">$7.6M</td>
+                  <td className="py-3 text-green-500 font-bold text-xl">$8.8M</td>
                 </tr>
                 <tr>
                   <td className="py-3 text-gray-300">Monthly Profit</td>
                   <td className="py-3 text-red-400">-$5K</td>
-                  <td className="py-3 text-green-500">+$13K</td>
-                  <td className="py-3 text-green-500 font-bold">+$513K</td>
+                  <td className="py-3 text-green-500">+$10K</td>
+                  <td className="py-3 text-green-500 font-bold">+$620K</td>
                 </tr>
               </tbody>
             </table>
@@ -91,15 +99,52 @@ export default function Appendix() {
 
           <div className="border border-gray-800 p-6">
             <p className="text-gray-300 mb-4">
-              <span className="font-semibold text-white">Assumptions:</span> Cards launch Q1 drives 3x growth. Revenue/user jumps from $80-368 → $152-440 with cards. Break-even Month 6, profitable onwards.
+              <span className="font-semibold text-white">Conservative modeling:</span> 7% APY midpoint, $177/user with cards, break-even Month 6.
             </p>
             <p className="text-gray-300">
-              <span className="font-semibold text-white">Conservative case (30K users):</span> $4.5M ARR, still profitable, still Series A-ready.
-            </p>
-            <p className="text-white font-bold mt-4">
-              Cards are critical. Without them, timeline extends but doesn't break.
+              <span className="font-semibold text-white">If 30K users:</span> $5.3M ARR, still profitable, still Series A-ready.
             </p>
           </div>
+        </div>
+      )
+    },
+    {
+      id: 'institutional',
+      title: 'Institutional Validation',
+      content: (
+        <div className="space-y-8">
+          <div className="border border-gray-800 p-6">
+            <h4 className="text-2xl font-bold text-white mb-4">Visa 2025 Onchain Lending Report:</h4>
+            <div className="grid md:grid-cols-2 gap-4 text-lg text-gray-300">
+              <div>• $670B+ total loans originated</div>
+              <div>• $14.8B active loans (84% utilization)</div>
+              <div>• Average rates: 5.1% APY (lend), 6.4% APR (borrow)</div>
+              <div>• 427K monthly loans</div>
+            </div>
+          </div>
+
+          <div className="border border-gray-800 p-6">
+            <h4 className="text-2xl font-bold text-white mb-4">Protocols:</h4>
+            <div className="space-y-3 text-lg text-gray-300">
+              <div>
+                <span className="font-semibold text-white">Morpho:</span> $1.9B active, Coinbase + Société Générale
+              </div>
+              <div>
+                <span className="font-semibold text-white">Credit Coop:</span> Powers Rain card, $175M+ processed
+              </div>
+              <div>
+                <span className="font-semibold text-white">Aave/Compound:</span> $14.8B active, 89% market share
+              </div>
+            </div>
+          </div>
+
+          <p className="text-xl text-white font-semibold">
+            We're connecting Nigerians to institutional-grade infrastructure that already processes billions.
+          </p>
+
+          <p className="text-sm text-gray-500 italic">
+            Reference: Visa (2025). Stablecoins Beyond Payments: The Onchain Lending Opportunity.
+          </p>
         </div>
       )
     }
@@ -117,7 +162,7 @@ export default function Appendix() {
             Appendix
           </h2>
           <p className="text-xl text-center text-gray-400 mb-12">
-            Deep dive into FAQs and numbers
+            Deep dive into FAQs, numbers, and institutional validation
           </p>
 
           {!isOpen ? (
