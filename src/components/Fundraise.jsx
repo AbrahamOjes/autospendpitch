@@ -73,11 +73,11 @@ export default function Fundraise() {
               </div>
               <div className="flex items-start gap-4">
                 <span className="text-green-500 font-bold min-w-[120px]">Month 12:</span>
-                <span className="text-gray-300">15K users, $1.8M ARR</span>
+                <span className="text-gray-300">15K users, $2.7M ARR</span>
               </div>
               <div className="flex items-start gap-4">
                 <span className="text-green-500 font-bold min-w-[120px]">Month 18:</span>
-                <span className="text-gray-300">50K users, $7.6M ARR → Series A ready</span>
+                <span className="text-gray-300">50K users, $8.8M ARR → Series A ready</span>
               </div>
             </div>
           </motion.div>

@@ -61,14 +61,6 @@ export default function Team() {
             ))}
           </div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ delay: 1 }}
-            className="text-xl text-center text-gray-400"
-          >
-            <span className="font-semibold text-white">Advisors:</span> Former CBN regulator | Ex-Wise executive | Crypto fund partner
-          </motion.p>
         </motion.div>
       </div>
     </section>

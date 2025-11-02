@@ -53,7 +53,7 @@ export default function Competitive() {
                   transition={{ delay: 0.5 }}
                 >
                   <td className="py-4 text-gray-300 font-semibold">Yield</td>
-                  <td className="py-4 text-green-500 font-bold text-xl">40% APY</td>
+                  <td className="py-4 text-green-500 font-bold text-xl">8-12% APY</td>
                   <td className="py-4 text-gray-500">0%</td>
                   <td className="py-4 text-gray-500">0%</td>
                 </motion.tr>
@@ -106,7 +106,7 @@ export default function Competitive() {
               <div className="border border-green-500 bg-green-500/5 p-6">
                 <h4 className="text-2xl font-bold text-green-500 mb-3">1. DeFi Yields (Live Now)</h4>
                 <p className="text-gray-300">
-                  40% APY via Katana vaults. Grey = 0%. Defensible: they'd need 18-24 month rebuild.
+                  8-12% APY. Grey = 0%. Defensible: 18-24 month rebuild.
                 </p>
               </div>
 
@@ -123,8 +123,11 @@ export default function Competitive() {
                 Together: Grey has cards but 0% yield.<br/>
                 We'll have both = unbeatable.
               </p>
-              <p className="text-xl text-gray-400">
+              <p className="text-xl text-gray-400 mb-4">
                 <span className="font-semibold">Positioning:</span> Today = best yields. Q1 = best yields + cards. No one else will have both.
+              </p>
+              <p className="text-lg text-gray-500">
+                <span className="font-semibold">Note:</span> Built on protocols powering Coinbase, Société Générale. Not experimental.
               </p>
             </div>
           </motion.div>

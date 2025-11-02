@@ -26,7 +26,7 @@ export default function UnitEconomics() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-5xl md:text-7xl font-black mb-16 text-center text-white">
-            $152-440/user with cards
+            $177/user with cards
           </h2>
 
           {/* Pre-cards vs With cards */}
@@ -45,13 +45,13 @@ export default function UnitEconomics() {
                   <span className="text-white font-semibold">$48/year</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>DeFi yield:</span>
-                  <span className="text-white font-semibold">$32-320/year</span>
+                  <span>DeFi yield margin:</span>
+                  <span className="text-white font-semibold">$57/year</span>
                 </div>
-                <div className="text-sm text-gray-500">(4-40% APY)</div>
+                <div className="text-sm text-gray-500">(7% APY midpoint)</div>
                 <div className="border-t border-gray-700 pt-4 flex justify-between text-2xl font-bold">
                   <span className="text-white">Total:</span>
-                  <span className="text-white">$80-368/year</span>
+                  <span className="text-white">$105/year</span>
                 </div>
               </div>
             </motion.div>
@@ -70,8 +70,8 @@ export default function UnitEconomics() {
                   <span className="text-white font-semibold">$48/year</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>DeFi yield:</span>
-                  <span className="text-white font-semibold">$32-320/year</span>
+                  <span>DeFi yield margin:</span>
+                  <span className="text-white font-semibold">$57/year</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-green-500">Card interchange:</span>
@@ -79,7 +79,7 @@ export default function UnitEconomics() {
                 </div>
                 <div className="border-t border-green-700 pt-4 flex justify-between text-2xl font-bold">
                   <span className="text-white">Total:</span>
-                  <span className="text-green-500">$152-440/year</span>
+                  <span className="text-green-500">$177/year</span>
                 </div>
               </div>
             </motion.div>
@@ -100,11 +100,11 @@ export default function UnitEconomics() {
               </div>
               <div className="text-center">
                 <div className="text-gray-400 mb-2">LTV (3yr)</div>
-                <div className="text-3xl font-bold text-white">$455</div>
+                <div className="text-3xl font-bold text-white">$531</div>
               </div>
               <div className="text-center">
                 <div className="text-gray-400 mb-2">LTV/CAC</div>
-                <div className="text-4xl font-bold text-green-500">23:1</div>
+                <div className="text-4xl font-bold text-green-500">27:1</div>
               </div>
             </div>
           </motion.div>
@@ -126,7 +126,7 @@ export default function UnitEconomics() {
             </div>
             <div>
               <div className="text-gray-400 mb-2">ARR at 50K:</div>
-              <div className="text-green-500 font-bold text-2xl">$7.6M</div>
+              <div className="text-green-500 font-bold text-2xl">$8.8M</div>
             </div>
           </motion.div>
         </motion.div>

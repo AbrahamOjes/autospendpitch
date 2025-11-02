@@ -41,6 +41,8 @@ export default function Solution() {
             <polygon points="32,8 24,32 32,32 28,56 48,28 36,28 40,8" fill="none" stroke="#00ff00" strokeWidth="1" opacity="0.5" transform="translate(2,2)"/>
           </svg>
         )
+      default:
+        return null
     }
   }
 
@@ -113,7 +115,7 @@ export default function Solution() {
             <h3 className="text-3xl font-bold text-white mb-6">How it works:</h3>
             <div className="space-y-4 text-xl text-gray-300">
               <div>1. Virtual ₦ account → Fund with naira → USDC in 30 seconds</div>
-              <div className="text-green-500 font-bold">2. Earn 40% APY via Katana DeFi vaults (auto-staked)</div>
+              <div className="text-green-500 font-bold">2. Earn 8-12% APY (Morpho, Aave, Credit Coop)</div>
               <div>3. Send free to friends (P2P)</div>
               <div>4. <span className="text-blue-500">[Q1 2026]</span> Spend with cards (Signify partnership)</div>
             </div>
@@ -129,9 +131,9 @@ export default function Solution() {
             <h3 className="text-2xl font-bold text-white mb-6">The innovation:</h3>
             <div className="grid md:grid-cols-2 gap-4 text-lg text-gray-300">
               <div>• No bank, no paperwork, 2 minutes to start</div>
-              <div>• Works with any Nigerian bank (GTBank, Zenith, Access)</div>
+              <div>• <span className="text-white font-bold">Real yield:</span> $1,000 = earn $80-120/year (vs Grey's $0)</div>
               <div className="md:col-span-2">
-                <span className="text-white font-bold">Real yield:</span> $1,000 saved = earn $400/year (vs $0 on Grey)
+                • Built on $670B+ institutional infrastructure
               </div>
             </div>
           </motion.div>

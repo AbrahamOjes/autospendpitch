@@ -6,7 +6,7 @@ import TAM from './components/TAM'
 import Traction from './components/Traction'
 import Competitive from './components/Competitive'
 import UnitEconomics from './components/UnitEconomics'
-import GTM from './components/GTM'
+import Growth from './components/Growth'
 import Roadmap from './components/Roadmap'
 import Team from './components/Team'
 import Fundraise from './components/Fundraise'
@@ -25,7 +25,7 @@ function App() {
       <Traction />
       <Competitive />
       <UnitEconomics />
-      <GTM />
+      <Growth />
       <Roadmap />
       <Team />
       <Fundraise />
