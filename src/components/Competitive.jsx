@@ -42,7 +42,8 @@ export default function Competitive() {
                   <th className="py-4 text-xl font-bold text-white">Feature</th>
                   <th className="py-4 text-xl font-bold text-green-500">Autospend</th>
                   <th className="py-4 text-xl font-bold text-gray-400">Grey</th>
-                  <th className="py-4 text-xl font-bold text-gray-400">Cleva</th>
+                  <th className="py-4 text-xl font-bold text-gray-400">Raenest</th>
+                  <th className="py-4 text-xl font-bold text-gray-400">Cenoa</th>
                 </tr>
               </thead>
               <tbody className="text-lg">
@@ -56,6 +57,7 @@ export default function Competitive() {
                   <td className="py-4 text-green-500 font-bold text-xl">8-12% APY</td>
                   <td className="py-4 text-gray-500">0%</td>
                   <td className="py-4 text-gray-500">0%</td>
+                  <td className="py-4 text-gray-500">5%</td>
                 </motion.tr>
                 <motion.tr
                   className="border-b border-gray-800"
@@ -66,7 +68,8 @@ export default function Competitive() {
                   <td className="py-4 text-gray-300 font-semibold">Cards</td>
                   <td className="py-4 text-green-500 font-bold">Q1 2026</td>
                   <td className="py-4 text-white">✅ Live</td>
-                  <td className="py-4 text-gray-500">Coming</td>
+                  <td className="py-4 text-white">✅ Live</td>
+                  <td className="py-4 text-white">✅ Live</td>
                 </motion.tr>
                 <motion.tr
                   className="border-b border-gray-800"
@@ -74,10 +77,11 @@ export default function Competitive() {
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 0.7 }}
                 >
-                  <td className="py-4 text-gray-300 font-semibold">P2P</td>
-                  <td className="py-4 text-green-500 font-bold">Free</td>
-                  <td className="py-4 text-gray-500">Paid</td>
-                  <td className="py-4 text-gray-500">Limited</td>
+                  <td className="py-4 text-gray-300 font-semibold">Fiat Access</td>
+                  <td className="py-4 text-green-500 font-bold">Deep</td>
+                  <td className="py-4 text-white">Deep</td>
+                  <td className="py-4 text-white">Deep</td>
+                  <td className="py-4 text-gray-500">Basic</td>
                 </motion.tr>
                 <motion.tr
                   initial={{ opacity: 0, x: -20 }}
@@ -86,8 +90,9 @@ export default function Competitive() {
                 >
                   <td className="py-4 text-gray-300 font-semibold">Users</td>
                   <td className="py-4 text-green-500">250</td>
-                  <td className="py-4 text-gray-500">12,000+</td>
-                  <td className="py-4 text-gray-500">Thousands</td>
+                  <td className="py-4 text-gray-500">2M+</td>
+                  <td className="py-4 text-gray-500">1M+</td>
+                  <td className="py-4 text-gray-500">400K+</td>
                 </motion.tr>
               </tbody>
             </table>
@@ -118,16 +123,24 @@ export default function Competitive() {
               </div>
             </div>
 
-            <div className="border border-gray-800 p-8 text-center">
-              <p className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Together: Grey has cards but 0% yield.<br/>
-                We'll have both = unbeatable.
+            <div className="border border-gray-800 p-8">
+              <p className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
+                Only player with highest yield (8-12%) + deep fiat + cards by Q1 2026
               </p>
-              <p className="text-xl text-gray-400 mb-4">
-                <span className="font-semibold">Positioning:</span> Today = best yields. Q1 = best yields + cards. No one else will have both.
-              </p>
-              <p className="text-lg text-gray-500">
-                <span className="font-semibold">Note:</span> Built on protocols powering Coinbase, Société Générale. Not experimental.
+              
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="border-l-4 border-gray-700 pl-4">
+                  <p className="text-lg font-semibold text-gray-300 mb-2">The Reality:</p>
+                  <p className="text-gray-400">3.65M+ combined users across competitors. We have 250.</p>
+                </div>
+                <div className="border-l-4 border-green-500 pl-4">
+                  <p className="text-lg font-semibold text-white mb-2">The Edge:</p>
+                  <p className="text-gray-300">They offer 0-5% yield. We offer 8-12%. They need 18-24 months to match.</p>
+                </div>
+              </div>
+
+              <p className="text-xl text-center text-gray-400">
+                <span className="font-semibold text-white">The bet:</span> Yield differential + cards (Q1) = capture 1.4% of their base (50K users)
               </p>
             </div>
           </motion.div>

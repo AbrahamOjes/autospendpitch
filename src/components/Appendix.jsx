@@ -7,6 +7,113 @@ export default function Appendix() {
 
   const sections = [
     {
+      id: 'competition',
+      title: 'Competitive Deep Dive',
+      content: (
+        <div className="space-y-8">
+          <div className="border border-gray-800 p-6">
+            <h4 className="text-2xl font-bold text-white mb-4">Two Types of Competitors:</h4>
+            
+            <div className="space-y-6">
+              <div>
+                <h5 className="text-xl font-bold text-gray-300 mb-3">Fiat Fintech (Grey, Raenest)</h5>
+                <div className="grid md:grid-cols-2 gap-4 text-lg">
+                  <div>
+                    <p className="text-green-500 font-semibold mb-2">Strong:</p>
+                    <ul className="text-gray-300 space-y-1 list-disc list-inside">
+                      <li>Cards live, massive scale</li>
+                      <li>Grey: 2M users</li>
+                      <li>Raenest: 1M users ($11M Series A)</li>
+                      <li>Deep fiat access</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-red-400 font-semibold mb-2">Weak:</p>
+                    <ul className="text-gray-300 space-y-1 list-disc list-inside">
+                      <li>0% yield</li>
+                      <li>Fiat rails = 18-24 months to access DeFi</li>
+                      <li>Would need complete rebuild on crypto rails</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h5 className="text-xl font-bold text-gray-300 mb-3">Stablecoin-Native (Cenoa, Onboard)</h5>
+                <div className="grid md:grid-cols-2 gap-4 text-lg">
+                  <div>
+                    <p className="text-green-500 font-semibold mb-2">Strong:</p>
+                    <ul className="text-gray-300 space-y-1 list-disc list-inside">
+                      <li>Cards + some yield</li>
+                      <li>Cenoa: 400K users, 5% APY</li>
+                      <li>Onboard: 50K users</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-red-400 font-semibold mb-2">Weak:</p>
+                    <ul className="text-gray-300 space-y-1 list-disc list-inside">
+                      <li>Shallow Nigeria fiat access</li>
+                      <li>No virtual naira accounts</li>
+                      <li>Onboard: 0% yield</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border border-gray-800 p-6">
+            <h4 className="text-2xl font-bold text-white mb-4">Our Dual Moat:</h4>
+            <div className="space-y-4 text-lg text-gray-300">
+              <div>
+                <p className="font-semibold text-white mb-2">1. DeFi Yields (LIVE NOW)</p>
+                <ul className="space-y-1 list-disc list-inside ml-4">
+                  <li>8-12% APY vs their 0-5%</li>
+                  <li>Built on $670B+ institutional protocols</li>
+                  <li>To replicate: Fiat players need 18-24 month rebuild</li>
+                  <li>By then we have 50K users + network effects</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-white mb-2">2. Cards + Deep Fiat (Q1 2026)</p>
+                <ul className="space-y-1 list-disc list-inside ml-4">
+                  <li>Virtual naira accounts (30-sec onboarding)</li>
+                  <li>Signify cards partnership</li>
+                  <li>PSP license in progress</li>
+                  <li>To replicate: Stablecoin players need 12-18 months</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="border border-gray-800 p-6">
+            <h4 className="text-2xl font-bold text-white mb-4">The Honest Math:</h4>
+            <div className="space-y-3 text-lg text-gray-300">
+              <p><span className="font-semibold text-white">Scale disadvantage:</span> 14,600x (3.65M vs 250 users)</p>
+              <p><span className="font-semibold text-white">Yield advantage:</span> 8-12% vs their 0-5%</p>
+              <p><span className="font-semibold text-white">Target:</span> 50K users = 1.4% of their combined base</p>
+              <p><span className="font-semibold text-white">Time advantage:</span> 18-24 months before they can match our yields</p>
+              <p className="text-xl font-bold text-white pt-4">
+                The bet: Yield differential + cards (Q1) = enough to capture 1.4% of their base before they can respond.
+              </p>
+            </div>
+          </div>
+
+          <div className="border border-gray-800 p-6">
+            <h4 className="text-2xl font-bold text-white mb-4">What It Takes to Beat Us:</h4>
+            <div className="space-y-3 text-lg text-gray-300">
+              <p><span className="font-semibold text-white">Raenest/Grey:</span> 18-24 months to rebuild on crypto rails for real DeFi</p>
+              <p><span className="font-semibold text-white">Cenoa:</span> Boost from 5% to 8-12% + build Nigeria depth</p>
+              <p><span className="font-semibold text-white">Onboard:</span> Add Nigeria fiat depth + add any yield</p>
+              <p className="text-xl font-bold text-white pt-4">
+                What we'll have by then: Cards (Q1 2026), 50K users, PSP license, Ghana/Kenya expansion, 85% retention locking them in.
+              </p>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
       id: 'faqs',
       title: 'Honest FAQs',
       content: (
