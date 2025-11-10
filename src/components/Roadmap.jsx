@@ -14,30 +14,19 @@ export default function Roadmap() {
   ]
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center justify-center py-20 px-6 bg-black relative">
-      {/* Subtle arrow guide */}
-      <motion.div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-      </motion.div>
-
-      <div className="max-w-5xl mx-auto">
+    <section ref={ref} className="min-h-screen flex items-center justify-center py-32 px-6 relative" style={{ backgroundColor: '#0F0E0E' }}>
+      <div className="max-w-5xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-5xl md:text-7xl font-black mb-16 text-center text-white">
+          <h2 className="font-['Anton',sans-serif] mb-20 text-center text-white uppercase" style={{ fontSize: '72px', fontWeight: 400, lineHeight: '100%' }}>
             DeFi today,<br/>cards unlock scale
           </h2>
 
           {/* Timeline */}
-          <div className="space-y-8 mb-16">
+          <div className="space-y-10 mb-20">
             {phases.map((phase, index) => (
               <motion.div
                 key={index}
@@ -46,16 +35,18 @@ export default function Roadmap() {
                 transition={{ delay: 0.3 + index * 0.15 }}
                 className="relative"
               >
-                <div className={`border ${phase.highlight ? 'border-green-500 bg-green-500/5' : 'border-gray-800'} p-8`}>
-                  <div className="flex items-start gap-6">
-                    <div className={`text-3xl font-black ${phase.highlight ? 'text-green-500' : 'text-white'} min-w-[180px]`}>
+                <div className={`border rounded-[32px] ${phase.highlight ? 'border-gray-800' : 'border-gray-800'} p-10`}
+                  style={phase.highlight ? { borderColor: '#6080DB', backgroundColor: 'rgba(96, 128, 219, 0.05)' } : {}}
+                >
+                  <div className="flex items-start gap-8">
+                    <div className={`text-3xl font-black min-w-[180px]`} style={phase.highlight ? { color: '#6080DB' } : { color: 'white' }}>
                       {phase.period}
                     </div>
                     <div className="flex-1">
-                      <h3 className={`text-2xl font-bold mb-2 ${phase.highlight ? 'text-green-500' : 'text-white'}`}>
+                      <h3 className={`text-2xl font-bold mb-3`} style={phase.highlight ? { color: '#6080DB' } : { color: 'white' }}>
                         {phase.title}
                       </h3>
-                      <p className="text-xl text-gray-300">{phase.details}</p>
+                      <p className="text-xl text-gray-300 leading-relaxed">{phase.details}</p>
                     </div>
                   </div>
                 </div>
@@ -65,7 +56,7 @@ export default function Roadmap() {
                   <motion.div
                     animate={{ y: [0, 5, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity, delay: index * 0.2 }}
-                    className="flex justify-center my-4"
+                    className="flex justify-center my-6"
                   >
                     <svg className="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -81,12 +72,12 @@ export default function Roadmap() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 1 }}
-            className="border-t border-gray-800 pt-8 text-center"
+            className="border-t border-gray-800 pt-10 text-center"
           >
-            <p className="text-2xl text-gray-300">
+            <p className="text-2xl text-gray-300 leading-relaxed">
               <span className="font-bold text-white">Critical:</span> Cards in Q1.
             </p>
-            <p className="text-xl text-gray-400 mt-2">
+            <p className="text-xl text-gray-400 mt-3 leading-relaxed">
               If slip → yield alone scales slower but still works.
             </p>
           </motion.div>

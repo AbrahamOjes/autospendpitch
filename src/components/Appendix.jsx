@@ -11,7 +11,7 @@ export default function Appendix() {
       title: 'Competitive Deep Dive',
       content: (
         <div className="space-y-8">
-          <div className="border border-gray-800 p-6">
+          <div className="border border-gray-800 p-6 rounded-[32px]">
             <h4 className="text-2xl font-bold text-white mb-4">Two Types of Competitors:</h4>
             
             <div className="space-y-6">
@@ -19,7 +19,7 @@ export default function Appendix() {
                 <h5 className="text-xl font-bold text-gray-300 mb-3">Fiat Fintech (Grey, Raenest)</h5>
                 <div className="grid md:grid-cols-2 gap-4 text-lg">
                   <div>
-                    <p className="text-green-500 font-semibold mb-2">Strong:</p>
+                    <p className="font-semibold mb-2" style={{ color: '#6080DB' }}>Strong:</p>
                     <ul className="text-gray-300 space-y-1 list-disc list-inside">
                       <li>Cards live, massive scale</li>
                       <li>Grey: 2M users</li>
@@ -42,7 +42,7 @@ export default function Appendix() {
                 <h5 className="text-xl font-bold text-gray-300 mb-3">Stablecoin-Native (Cenoa, Onboard)</h5>
                 <div className="grid md:grid-cols-2 gap-4 text-lg">
                   <div>
-                    <p className="text-green-500 font-semibold mb-2">Strong:</p>
+                    <p className="font-semibold mb-2" style={{ color: '#6080DB' }}>Strong:</p>
                     <ul className="text-gray-300 space-y-1 list-disc list-inside">
                       <li>Cards + some yield</li>
                       <li>Cenoa: 400K users, 5% APY</li>
@@ -62,7 +62,7 @@ export default function Appendix() {
             </div>
           </div>
 
-          <div className="border border-gray-800 p-6">
+          <div className="border border-gray-800 p-6 rounded-[32px]">
             <h4 className="text-2xl font-bold text-white mb-4">Our Dual Moat:</h4>
             <div className="space-y-4 text-lg text-gray-300">
               <div>
@@ -86,7 +86,7 @@ export default function Appendix() {
             </div>
           </div>
 
-          <div className="border border-gray-800 p-6">
+          <div className="border border-gray-800 p-6 rounded-[32px]">
             <h4 className="text-2xl font-bold text-white mb-4">The Honest Math:</h4>
             <div className="space-y-3 text-lg text-gray-300">
               <p><span className="font-semibold text-white">Scale disadvantage:</span> 14,600x (3.65M vs 250 users)</p>
@@ -99,7 +99,7 @@ export default function Appendix() {
             </div>
           </div>
 
-          <div className="border border-gray-800 p-6">
+          <div className="border border-gray-800 p-6 rounded-[32px]">
             <h4 className="text-2xl font-bold text-white mb-4">What It Takes to Beat Us:</h4>
             <div className="space-y-3 text-lg text-gray-300">
               <p><span className="font-semibold text-white">Raenest/Grey:</span> 18-24 months to rebuild on crypto rails for real DeFi</p>
@@ -192,19 +192,19 @@ export default function Appendix() {
                   <td className="py-3 text-gray-300">Annual Revenue</td>
                   <td className="py-3 text-white">$26K</td>
                   <td className="py-3 text-gray-500">-</td>
-                  <td className="py-3 text-green-500 font-bold text-xl">$8.8M</td>
+                  <td className="py-3 font-bold text-xl" style={{ color: '#6080DB' }}>$8.8M</td>
                 </tr>
                 <tr>
                   <td className="py-3 text-gray-300">Monthly Profit</td>
                   <td className="py-3 text-red-400">-$5K</td>
-                  <td className="py-3 text-green-500">+$10K</td>
-                  <td className="py-3 text-green-500 font-bold">+$620K</td>
+                  <td className="py-3" style={{ color: '#6080DB' }}>+$10K</td>
+                  <td className="py-3 font-bold" style={{ color: '#6080DB' }}>+$620K</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <div className="border border-gray-800 p-6">
+          <div className="border border-gray-800 p-6 rounded-[32px]">
             <p className="text-gray-300 mb-4">
               <span className="font-semibold text-white">Conservative modeling:</span> 7% APY midpoint, $177/user with cards, break-even Month 6.
             </p>
@@ -220,7 +220,7 @@ export default function Appendix() {
       title: 'Institutional Validation',
       content: (
         <div className="space-y-8">
-          <div className="border border-gray-800 p-6">
+          <div className="border border-gray-800 p-6 rounded-[32px]">
             <h4 className="text-2xl font-bold text-white mb-4">Visa 2025 Onchain Lending Report:</h4>
             <div className="grid md:grid-cols-2 gap-4 text-lg text-gray-300">
               <div>• $670B+ total loans originated</div>
@@ -230,7 +230,7 @@ export default function Appendix() {
             </div>
           </div>
 
-          <div className="border border-gray-800 p-6">
+          <div className="border border-gray-800 p-6 rounded-[32px]">
             <h4 className="text-2xl font-bold text-white mb-4">Protocols:</h4>
             <div className="space-y-3 text-lg text-gray-300">
               <div>
@@ -258,17 +258,17 @@ export default function Appendix() {
   ]
 
   return (
-    <section className="min-h-screen flex items-center justify-center py-20 px-6 bg-gradient-to-b from-gray-900 to-black">
+    <section className="min-h-screen flex items-center justify-center py-32 px-6" style={{ backgroundColor: '#0F0E0E' }}>
       <div className="max-w-6xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-6xl font-black mb-8 text-center text-white">
+          <h2 className="text-4xl md:text-6xl font-black mb-10 text-center text-white">
             Appendix
           </h2>
-          <p className="text-xl text-center text-gray-400 mb-12">
+          <p className="text-xl text-center text-gray-400 mb-16 leading-relaxed">
             Deep dive into FAQs, numbers, and institutional validation
           </p>
 
@@ -277,7 +277,7 @@ export default function Appendix() {
               onClick={() => setIsOpen(true)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mx-auto block px-8 py-4 border-2 border-gray-700 hover:border-white text-white font-bold text-lg transition-all"
+              className="mx-auto block px-8 py-4 border-2 border-gray-700 hover:border-white text-white font-bold text-lg transition-all rounded-[32px]"
             >
               View Appendix →
             </motion.button>
@@ -290,7 +290,7 @@ export default function Appendix() {
                 className="space-y-4"
               >
                 {sections.map((section) => (
-                  <div key={section.id} className="border border-gray-800">
+                  <div key={section.id} className="border border-gray-800 rounded-[32px]">
                     <button
                       onClick={() => setOpenSection(openSection === section.id ? null : section.id)}
                       className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-900 transition-colors"

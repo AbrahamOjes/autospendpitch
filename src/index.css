@@ -5,6 +5,7 @@
 @layer base {
   body {
     @apply bg-black text-white antialiased;
+    font-family: 'Figtree', system-ui, sans-serif;
   }
   
   html {

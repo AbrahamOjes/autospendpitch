@@ -7,19 +7,8 @@ export default function Hero() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center justify-center py-20 px-6 bg-gradient-to-b from-black to-gray-900 relative">
-      {/* Subtle arrow guide */}
-      <motion.div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-      </motion.div>
-
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="min-h-screen flex items-center justify-center py-32 px-6 relative" style={{ backgroundColor: '#0F0E0E' }}>
+      <div className="max-w-6xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -27,7 +16,8 @@ export default function Hero() {
           className="text-center"
         >
           <motion.h2 
-            className="text-6xl md:text-8xl font-black mb-8 text-white"
+            className="font-['Anton',sans-serif] mb-8 text-white uppercase"
+            style={{ fontSize: '72px', fontWeight: 400, lineHeight: '100%' }}
             initial={{ scale: 0.9 }}
             animate={isInView ? { scale: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -39,9 +29,9 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.5 }}
-            className="space-y-8 max-w-3xl mx-auto"
+            className="space-y-10 max-w-3xl mx-auto"
           >
-            <p className="text-2xl md:text-3xl text-gray-300">
+            <p className="text-2xl md:text-3xl text-gray-300 leading-relaxed">
               Nigeria, 2021. Central bank banned international cards.
             </p>
             
@@ -53,8 +43,8 @@ export default function Hero() {
               They ran out of dollars.
             </motion.p>
 
-            <div className="border-t border-gray-700 pt-8 mt-8">
-              <p className="text-xl md:text-2xl text-gray-400 mb-4">
+            <div className="border-t border-gray-800 pt-10 mt-12">
+              <p className="text-xl md:text-2xl text-gray-400 mb-6 leading-relaxed">
                 Today: 12M Nigerians use gift cards, P2P agents, workarounds to pay for Netflix or run Facebook ads.
               </p>
               <p className="text-2xl md:text-3xl font-semibold text-white">

@@ -11,7 +11,7 @@ export default {
         'accent-dim': '#A0A0A0',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Figtree', 'system-ui', 'sans-serif'],
       },
     },
   },
