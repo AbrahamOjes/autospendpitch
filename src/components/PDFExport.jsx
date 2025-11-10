@@ -42,7 +42,7 @@ export default function PDFExport() {
       <button
         onClick={generatePDF}
         disabled={isGenerating}
-        className="bg-white text-black px-6 py-3 font-bold border-2 border-white hover:bg-black hover:text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+        className="bg-white text-black px-6 py-3 font-bold border-2 border-white hover:bg-black hover:text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 rounded-[32px]"
       >
         {isGenerating ? (
           <>

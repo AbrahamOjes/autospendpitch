@@ -3,11 +3,9 @@ import Hero from './components/Hero'
 import Problem from './components/Problem'
 import Solution from './components/Solution'
 import TAM from './components/TAM'
-import Traction from './components/Traction'
 import Competitive from './components/Competitive'
 import UnitEconomics from './components/UnitEconomics'
 import Growth from './components/Growth'
-import Roadmap from './components/Roadmap'
 import Team from './components/Team'
 import Fundraise from './components/Fundraise'
 import Appendix from './components/Appendix'
@@ -16,17 +14,15 @@ import PDFExport from './components/PDFExport'
 
 function App() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen" style={{ backgroundColor: '#0F0E0E' }}>
       <TitlePage />
       <Hero />
       <Problem />
       <Solution />
       <TAM />
-      <Traction />
       <Competitive />
       <UnitEconomics />
       <Growth />
-      <Roadmap />
       <Team />
       <Fundraise />
       <Appendix />
