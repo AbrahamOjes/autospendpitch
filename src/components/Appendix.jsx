@@ -89,7 +89,7 @@ export default function Appendix() {
           <div className="border border-gray-800 p-6 rounded-[32px]">
             <h4 className="text-2xl font-bold text-white mb-4">The Honest Math:</h4>
             <div className="space-y-3 text-lg text-gray-300">
-              <p><span className="font-semibold text-white">Scale disadvantage:</span> 14,600x (3.65M vs 250 users)</p>
+              <p><span className="font-semibold text-white">Scale disadvantage:</span> 3,650x (3.65M vs 1,000 users)</p>
               <p><span className="font-semibold text-white">Yield advantage:</span> 8-12% vs their 0-5%</p>
               <p><span className="font-semibold text-white">Target:</span> 50K users = 1.4% of their combined base</p>
               <p><span className="font-semibold text-white">Time advantage:</span> 18-24 months before they can match our yields</p>
@@ -125,7 +125,7 @@ export default function Appendix() {
             },
             {
               q: '"What if cards slip past Q1?"',
-              a: "We're growing on yield alone (250 users, 85% retention). Just slower. Yield differential (8-12% vs Grey's 0%) is compelling."
+              a: "We're growing on yield alone (1,000 users, 85% retention). Just slower. Yield differential (8-12% vs Grey's 0%) is compelling."
             },
             {
               q: '"Is 3% P2P volume enough to claim network effects?"',
@@ -178,7 +178,7 @@ export default function Appendix() {
               <tbody className="text-lg">
                 <tr className="border-b border-gray-800">
                   <td className="py-3 text-gray-300">Users</td>
-                  <td className="py-3 text-white">250</td>
+                  <td className="py-3 text-white">1,000</td>
                   <td className="py-3 text-white">5,000</td>
                   <td className="py-3 text-white font-bold">50,000</td>
                 </tr>

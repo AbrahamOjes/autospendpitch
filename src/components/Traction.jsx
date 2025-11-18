@@ -7,7 +7,7 @@ export default function Traction() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   const metrics = [
-    { value: '250', label: 'users (100% organic)' },
+    { value: '1,000', label: 'users (100% organic)' },
     { value: '$500K', label: 'processed' },
     { value: '42%', label: 'referral rate', highlight: true },
     { value: '85%', label: 'retention', highlight: true },
@@ -23,7 +23,7 @@ export default function Traction() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="font-['Anton',sans-serif] mb-10 text-center text-white uppercase" style={{ fontSize: '72px', fontWeight: 400, lineHeight: '100%' }}>
-            250 users, 85% retention,<br/>$0 spent
+            1,000 users, 85% retention,<br/>$0 spent
           </h2>
 
           <p className="text-2xl text-center text-gray-400 mb-20">3 months live:</p>

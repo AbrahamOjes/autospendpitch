@@ -5,7 +5,7 @@
 | **Yield** | **8-12% APY** | 0% | **0%** | 0% | 5% |
 | **Cards** | **Dec 2025** | ✅ | ✅ | ✅ | ✅ |
 | **Fiat Access** | **Deep** | Deep | Deep | Basic | Basic |
-| **Users** | 250 | 2M+ | 1M+ | 50K+ | 400K+ |
+| **Users** | 1,000 | 2M+ | 1M+ | 50K+ | 400K+ |
 
 **Two types of competitors:**
 
@@ -42,7 +42,7 @@
 - Raenest: 1M users ($11M Series A, 0% yield)
 - Cenoa: 400K users (5% yield)
 - Onboard: 50K users (0% yield)
-- **Us: 250 users**
+- **Us: 1,000 users**
 
 **Cards launch in 1 month (Dec 2025). Then we're the only one with:**
 - Highest yield (8-12% vs their 0-5%)
@@ -55,7 +55,7 @@
 - **Math works:** Even 0.1% of Grey's 2M = 2K users. We only need 50K for Series A.
 
 **The brutal truth:** 
-14,600x scale disadvantage. But they offer 0-5% yield. We offer 8-12%.
+3,650x scale disadvantage. But they offer 0-5% yield. We offer 8-12%.
 
 **The bet:** Yield differential + cards (Dec) = enough to capture 1.4% of their base.
 
@@ -64,7 +64,7 @@
 ## **Bottom Line**
 
 **The reality:**
-Combined, competitors have 3.65M+ users. We have 250.
+Combined, competitors have 3.65M+ users. We have 1,000.
 
 **The reframe:**
 - 3.65M users across 5+ countries earning 0-5% yield
@@ -82,6 +82,6 @@ Cards (Dec 2025), 50K users, PSP license, Ghana/Kenya, 85% retention locking the
 **The edge:**
 We're not competing for their users. We're capturing the savers in Nigeria who want 8-12% that nobody else offers. By the time they can match us, we've already locked in 50K users with network effects.
 
-**The honest question:** Is 8-12% yield differential enough to overcome 14,600x scale disadvantage?
+**The honest question:** Is 8-12% yield differential enough to overcome 3,650x scale disadvantage?
 
 **Our answer:** Yes. Because they can't offer it for 18-24 months, and we only need 1.4% of their base.

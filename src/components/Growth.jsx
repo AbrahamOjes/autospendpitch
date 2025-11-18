@@ -42,7 +42,7 @@ export default function Growth() {
               transition={{ delay: 0.3 }}
               className="border border-gray-300 p-10 mb-16 rounded-[32px]"
             >
-              <h3 className="text-2xl font-bold text-black mb-4">What's working (0 → 250):</h3>
+              <h3 className="text-2xl font-bold text-black mb-4">What's working (0 → 1,000):</h3>
               <p className="text-xl text-gray-700 leading-relaxed">42% referrals, 85% retention</p>
             </motion.div>
 
@@ -53,7 +53,7 @@ export default function Growth() {
               transition={{ delay: 0.5 }}
               className="mb-16"
             >
-              <h3 className="text-3xl font-bold text-black mb-10">How we scale (250 → 50K):</h3>
+              <h3 className="text-3xl font-bold text-black mb-10">How we scale (1,000 → 50K):</h3>
               
               <div className="space-y-8">
                 {[

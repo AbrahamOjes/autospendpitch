@@ -99,7 +99,7 @@ export default function Competitive() {
                   transition={{ delay: 0.8 }}
                 >
                   <td className="py-6 text-gray-300 font-semibold">Users</td>
-                  <td className="py-6" style={{ color: '#6080DB' }}>250</td>
+                  <td className="py-6" style={{ color: '#6080DB' }}>1,000</td>
                   <td className="py-6 text-gray-500">2M+</td>
                   <td className="py-6 text-gray-500">1M+</td>
                   <td className="py-6 text-gray-500">400K+</td>
@@ -141,7 +141,7 @@ export default function Competitive() {
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div className="border-l-4 border-gray-700 pl-6">
                   <p className="text-lg font-semibold text-gray-300 mb-3">The Reality:</p>
-                  <p className="text-gray-400 leading-relaxed">3.65M+ combined users across competitors. We have 250.</p>
+                  <p className="text-gray-400 leading-relaxed">3.65M+ combined users across competitors. We have 1,000.</p>
                 </div>
                 <div className="border-l-4 pl-6" style={{ borderColor: '#6080DB' }}>
                   <p className="text-lg font-semibold text-white mb-3">The Edge:</p>
