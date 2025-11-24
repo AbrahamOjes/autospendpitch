@@ -10,9 +10,7 @@ export default function Team() {
     { name: 'Abraham Ojes', role: 'Founder & CEO', background: 'Ex-Collect (SME payments infrastructure)' },
     { name: 'Adewale Martins', role: 'Co-founder & CTO', background: 'Ex-Collect, Ex-OPay (millions of users)' },
     { name: 'Blessing Makaraba', role: 'Founding Engineer', background: 'Ex-Flutterwave/GTBank' },
-    { name: 'Babajide Apata', role: 'Founding Engineer', background: 'Ex-Bitso/Interswitch' },
-    { name: 'Abdulfatai Aka', role: 'Agentic Systems Engineer', background: 'AI & DeFi' },
-    { name: 'Evans Eburu', role: 'Blockchain Engineer', background: 'DeFi specialist' }
+    { name: 'Babajide Apata', role: 'Founding Engineer', background: 'Ex-Bitso/Interswitch' }
   ]
 
   return (
